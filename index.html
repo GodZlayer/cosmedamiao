@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cosme e Damião - Salão de Festas</title>
+    <meta
+      name="description"
+      content="Salão de festas amplo e completo em Santa Luzia-MG. Piscina, área coberta, cozinha equipada e suítes."
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="fav/favicon.ico" sizes="any" />
+    <link rel="icon" href="fav/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="fav/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="fav/apple-touch-icon.png" />
+    <link rel="manifest" href="fav/site.webmanifest" />
+    <style>
+      :root {
+        --bs-body-font-family: "Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+        --c-primary: #3a8fb7;
+        --c-primary-dark: #4a6675;
+        --c-accent: #d6c6a8;
+        --c-ink: #2f3e46;
+        --c-muted: #4f5d65;
+        --c-bg: #e6e8e6;
+      }
+
+      body {
+        background: radial-gradient(
+            circle at top left,
+            rgba(58, 143, 183, 0.18),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 80% 10%,
+            rgba(214, 198, 168, 0.18),
+            transparent 55%
+          ),
+          var(--c-bg);
+        color: var(--c-ink);
+      }
+
+      .brand {
+        font-family: "Bebas Neue", "Impact", sans-serif;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+      }
+
+      .logo-mark {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .hero {
+        padding: 96px 0 72px;
+      }
+
+      .hero h1 {
+        font-family: "Bebas Neue", "Impact", sans-serif;
+        font-size: clamp(46px, 7vw, 86px);
+        line-height: 1;
+      }
+
+      .badge-custom {
+        background: rgba(14, 165, 164, 0.16);
+        color: var(--c-primary-dark);
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        --bs-btn-bg: var(--c-primary);
+        --bs-btn-border-color: var(--c-primary);
+        --bs-btn-hover-bg: var(--c-primary-dark);
+        --bs-btn-hover-border-color: var(--c-primary-dark);
+      }
+
+      .btn-outline-primary {
+        --bs-btn-color: var(--c-primary-dark);
+        --bs-btn-border-color: var(--c-primary);
+        --bs-btn-hover-bg: var(--c-primary);
+        --bs-btn-hover-border-color: var(--c-primary);
+      }
+
+      .section-title {
+        font-family: "Bebas Neue", "Impact", sans-serif;
+        font-size: clamp(32px, 4vw, 54px);
+      }
+
+      .feature-card {
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        padding: 22px;
+        height: 100%;
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+      }
+
+      .pricing-wrap {
+        background: linear-gradient(
+          135deg,
+          rgba(14, 165, 164, 0.12),
+          rgba(242, 169, 0, 0.18)
+        );
+        border-radius: 28px;
+        padding: 36px;
+        box-shadow: 0 24px 45px rgba(0, 0, 0, 0.12);
+      }
+
+      .price-card {
+        background: white;
+        border-radius: 18px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        height: 100%;
+      }
+
+      .price {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--c-primary-dark);
+      }
+
+      .gallery-img {
+        border-radius: 18px;
+        object-fit: cover;
+        height: 230px;
+        width: 100%;
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+      }
+
+      .contact-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 22px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer {
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        color: var(--c-muted);
+      }
+
+      .footer-logo {
+        width: 180px;
+        max-width: 70vw;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top bg-body" style="backdrop-filter: blur(12px)">
+      <div class="container py-2">
+        <a class="navbar-brand d-flex align-items-center" href="#topo">
+          <span class="brand">Cosme e Damião</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#espaco">O Espaço</a></li>
+            <li class="nav-item"><a class="nav-link" href="#precos">Promoções</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
+          <a
+            class="btn btn-primary ms-lg-3"
+            href="https://www.instagram.com/cosmedamiaofestas/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header id="topo" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge badge-custom mb-3">Inauguração com valores especiais</span>
+            <h1 class="mb-3">
+              <img class="logo-mark" src="logo.png" alt="Cosme e Damião - Salão de Festas" />
+            </h1>
+            <p class="lead text-muted">
+              Espaço amplo, moderno e completo em Santa Luzia - MG. Área coberta enorme e super
+              arejada, acabamentos bonitos, piscina, cozinha equipada e duas suítes. Rua plana e
+              acessível para cadeirantes, bairro tranquilo e seguro.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a
+                class="btn btn-primary btn-lg"
+                href="https://g.page/r/CeKhJL183ZQpEBM/review"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Ver no Maps
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-4 shadow">
+                <div class="carousel-item active">
+                  <img
+                    src="piscina%20salao%20longe.jpeg"
+                    class="d-block w-100"
+                    alt="Visao ampla do salão e piscina"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="piscina%20vista%20cozinha%20fonte.jpeg"
+                    class="d-block w-100"
+                    alt="Piscina com vista para a cozinha"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="piscina%20sal%C3%A3o.jpeg"
+                    class="d-block w-100"
+                    alt="Piscina e area do salão"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="espaco" class="py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h2 class="section-title">Um espaço completo para celebrar</h2>
+            <p class="text-muted">
+              Perfeito para Day Use, festas, comemorações e eventos em geral. O espaço é bem grande,
+              com área coberta enorme, super arejada, cozinha, banheiros, piscina e duas suítes para
+              descanso ou dormir.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <h5>Área coberta e ventilada</h5>
+              <p class="text-muted">Conforto para festas de dia ou à noite, faça chuva ou sol.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <h5>Piscina e lazer</h5>
+              <p class="text-muted">Piscina com área de apoio para reunir família e amigos.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <h5>Cozinha completa</h5>
+              <p class="text-muted">Fogão com gás, geladeira e cozinha prontos para uso.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <h5>Suítes de apoio</h5>
+              <p class="text-muted">Duas suítes para descanso ou dormir com tranquilidade.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <h5>Acessibilidade total</h5>
+              <p class="text-muted">Rua plana e fácil acesso para cadeirantes e mobilidade reduzida.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <h5>Bairro seguro</h5>
+              <p class="text-muted">Tranquilidade para curtir a festa sem preocupação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precos" class="py-5">
+      <div class="container">
+        <div class="pricing-wrap">
+          <div class="row align-items-center mb-4">
+            <div class="col-lg-7">
+              <h2 class="section-title">Promoção de inauguração</h2>
+              <p class="text-muted">
+                Horário sugerido entre 6h e 19h. Entre em contato para combinar o melhor para o seu
+                evento.
+              </p>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <span class="badge badge-custom">Valores válidos para a inauguração</span>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="price-card">
+                <h5>Sábado ou Domingo</h5>
+                <div class="price">R$ 950</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="price-card">
+                <h5>Sexta-feira</h5>
+                <div class="price">R$ 600</div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="price-card">
+                <h5>Segunda a Quinta</h5>
+                <div class="price">R$ 500</div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 mt-3">
+            <div class="col-lg-6">
+              <div class="price-card">
+                <h5>Inclui</h5>
+                <ul class="text-muted mb-0">
+                  <li>Uso do fogão com gás, geladeira e cozinha.</li>
+                  <li>10 mesas e 40 cadeiras com braço.</li>
+                  <li>Caixa de som.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="price-card">
+                <h5>Adicional</h5>
+                <ul class="text-muted mb-0">
+                  <li>2 suítes disponíveis para descanso.</li>
+                  <li>Combinar horário e condições.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="py-5">
+      <div class="container">
+        <h2 class="section-title mb-3">Galeria do espaço</h2>
+        <p class="text-muted mb-4">
+          Todas as imagens reais do salão, cozinha, banheiros e piscina.
+        </p>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="piscina%20escada.jpeg"
+              class="gallery-img"
+              alt="Piscina com escada"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="COZINHA.jpeg"
+              class="gallery-img"
+              alt="Cozinha principal"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="piscina%20sal%C3%A3o.jpeg"
+              class="gallery-img"
+              alt="Piscina e salão"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="piscina%20vista%20cozinha%20fonte.jpeg"
+              class="gallery-img"
+              alt="Piscina com vista da cozinha"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="pia%20cozinha.jpeg"
+              class="gallery-img"
+              alt="Pia da cozinha"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="cozinha2.jpeg"
+              class="gallery-img"
+              alt="Cozinha com balcão"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="piscina%20salao%20longe.jpeg"
+              class="gallery-img"
+              alt="Vista ampla do salão"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="piscina%20cozinha%20.jpeg"
+              class="gallery-img"
+              alt="Piscina e cozinha"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="banheiro%201.jpeg"
+              class="gallery-img"
+              alt="Banheiro"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="banheiro2.jfif"
+              class="gallery-img"
+              alt="Banheiro adicional"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <img
+              src="sal%C3%A3o.jfif"
+              class="gallery-img"
+              alt="Salão coberto"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-6">
+            <img
+              src="vista%20piscina%20cozinha%20longe.jpeg"
+              class="gallery-img"
+              alt="Vista da piscina e cozinha"
+            />
+          </div>
+          <div class="col-sm-6 col-lg-6">
+            <img
+              src="vista%20do%20sal%C3%A3o%20piscina.jfif"
+              class="gallery-img"
+              alt="Vista do salão e piscina"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-6">
+            <div class="contact-card h-100">
+              <h3 class="section-title">Contato e localização</h3>
+              <div class="ratio ratio-4x3">
+                <iframe
+                  title="Localização Cosme e Damião"
+                  src="https://www.google.com/maps?q=R.%20Mangarataia%2C%20178%2C%20Santa%20Luzia%20-%20MG&output=embed"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-card h-100">
+              <h4 class="mb-3">Resumo do espaço</h4>
+              <ul class="text-muted mb-4">
+                <li>Área coberta ampla e ventilada.</li>
+                <li>Piscina para Day Use e eventos.</li>
+                <li>Cozinha equipada e banheiros.</li>
+                <li>2 suítes para descanso.</li>
+                <li>Rua plana, acessível e segura.</li>
+              </ul>
+              <a
+                class="btn btn-primary btn-lg"
+                href="https://www.instagram.com/cosmedamiaofestas/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Quero reservar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py-4">
+      <div class="container d-flex justify-content-center">
+        <img class="footer-logo" src="logo.png" alt="Logo Cosme e Damião" />
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
