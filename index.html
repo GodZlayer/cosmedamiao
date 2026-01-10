@@ -196,6 +196,60 @@
         max-width: 70vw;
         height: auto;
       }
+
+      .include-list li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .include-icon {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+
+      .btn-whatsapp {
+        background: linear-gradient(135deg, #1ebc5d, #0b9444);
+        border: none;
+        box-shadow: 0 18px 28px rgba(11, 148, 68, 0.3);
+      }
+
+      .btn-whatsapp:hover {
+        background: linear-gradient(135deg, #19a754, #0a7f3a);
+        box-shadow: 0 22px 32px rgba(11, 148, 68, 0.35);
+      }
+
+      .summary-list li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .summary-icon {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .summary-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        min-height: 100%;
+      }
+
+      .summary-card .summary-list {
+        align-self: center;
+        margin: 0 auto 24px;
+      }
+
+      .summary-card .summary-list li {
+        justify-content: center;
+      }
+
+      .summary-card .btn-whatsapp {
+        align-self: center;
+      }
     </style>
   </head>
   <body>
@@ -365,33 +419,67 @@
               </p>
             </div>
             <div class="col-lg-5 text-lg-end">
-              <span class="badge badge-custom">Consulte condições especiais</span>
+              <span class="badge badge-custom">🔥 Promoção de inauguração</span>
             </div>
           </div>
-          <div class="row g-4 mt-3">
-            <div class="col-lg-6">
+          <div class="row g-3 mt-3">
+            <div class="col-12">
               <div class="price-card">
                 <h5>O que está incluso</h5>
-                <ul class="text-muted mb-0">
-                  <li>Uso do fogão com gás, geladeira e cozinha.</li>
-                  <li>10 mesas e 40 cadeiras com braço.</li>
-                  <li>Caixa de som.</li>
+                <ul class="text-muted mb-0 include-list">
+                  <li>
+                    <span class="include-icon" aria-hidden="true">🍳</span>
+                    <span>Uso do fogão com gás, geladeira e cozinha.</span>
+                  </li>
+                  <li>
+                    <span class="include-icon" aria-hidden="true">🪑</span>
+                    <span>10 mesas e 40 cadeiras com braço.</span>
+                  </li>
+                  <li>
+                    <span class="include-icon" aria-hidden="true">🔊</span>
+                    <span>Caixa de som.</span>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="col-lg-6">
+          </div>
+          <div class="row g-3 mt-3">
+            <div class="col-md-4">
               <div class="price-card">
-                <h5>Fale com a gente</h5>
-                <p class="text-muted mb-3">
-                  Consulte condições e reserve a data pelo WhatsApp.
-                </p>
+                <h5>Sábado ou Domingo</h5>
                 <a
-                  class="btn btn-primary"
-                  href="https://wa.me/5531996699662?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20condi%C3%A7%C3%B5es%20para%20o%20sal%C3%A3o%20(Cosme%20e%20Dami%C3%A3o)."
+                  class="btn btn-primary btn-sm"
+                  href="https://wa.me/5531996699662?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20condi%C3%A7%C3%B5es%20para%20S%C3%A1bado%20ou%20Domingo%20no%20sal%C3%A3o%20(Cosme%20e%20Dami%C3%A3o)."
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Consulte condições no WhatsApp
+                  Consulte condições
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="price-card">
+                <h5>Sexta-feira</h5>
+                <a
+                  class="btn btn-primary btn-sm"
+                  href="https://wa.me/5531996699662?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20condi%C3%A7%C3%B5es%20para%20Sexta-feira%20no%20sal%C3%A3o%20(Cosme%20e%20Dami%C3%A3o)."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Consulte condições
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="price-card">
+                <h5>Segunda a Quinta</h5>
+                <a
+                  class="btn btn-primary btn-sm"
+                  href="https://wa.me/5531996699662?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20condi%C3%A7%C3%B5es%20para%20Segunda%20a%20Quinta%20no%20sal%C3%A3o%20(Cosme%20e%20Dami%C3%A3o)."
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Consulte condições
                 </a>
               </div>
             </div>
@@ -506,7 +594,7 @@
       <div class="container">
         <div class="row g-4 align-items-stretch">
           <div class="col-lg-6">
-            <div class="contact-card h-100">
+            <div class="contact-card h-100 summary-card">
               <h3 class="section-title">Contato e localização</h3>
               <address class="text-muted mb-3">Rua Mangarataia, 178 - Santa Luzia, MG</address>
               <a
@@ -532,20 +620,34 @@
           <div class="col-lg-6">
             <div class="contact-card h-100">
               <h4 class="mb-3">Resumo do espaço</h4>
-              <ul class="text-muted mb-4">
-                <li>Área coberta ampla e ventilada.</li>
-                <li>Piscina para Day Use e eventos.</li>
-                <li>Cozinha equipada e banheiros.</li>
-                <li>Rua plana, acessível e segura.</li>
+              <ul class="text-muted summary-list">
+                <li>
+                  <span class="summary-icon" aria-hidden="true">🌬️</span>
+                  <span>Área coberta ampla e ventilada.</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">🏊</span>
+                  <span>Piscina para Day Use e eventos.</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">🍽️</span>
+                  <span>Cozinha equipada e banheiros.</span>
+                </li>
+                <li>
+                  <span class="summary-icon" aria-hidden="true">🛣️</span>
+                  <span>Rua plana, acessível e segura.</span>
+                </li>
               </ul>
               <a
-                class="btn btn-primary btn-lg"
+                class="btn btn-primary btn-lg btn-whatsapp"
                 href="https://wa.me/5531996699662?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20condi%C3%A7%C3%B5es%20para%20reservar%20o%20sal%C3%A3o%20(Cosme%20e%20Dami%C3%A3o)."
                 target="_blank"
                 rel="noreferrer"
               >
-                Consultar condições no WhatsApp
+                💬 Consultar condições no WhatsApp
               </a>
+            </div>
+              </div>
             </div>
           </div>
         </div>
